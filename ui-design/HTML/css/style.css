@@ -1,0 +1,65 @@
+#imageid {
+vertical-align:middle;
+font-size:28px;
+color:white;
+}
+
+
+
+#loginvalidation {
+color:red;
+}
+
+#signup {
+
+color:blue;
+
+}
+
+.menuitemdetails {
+
+background-color:green;
+
+}
+
+
+
+#loginvalidation {
+color : red;
+}
+
+#signup {
+
+color : blue;
+
+}
+
+.menuitemdetails {
+
+background-color : green;
+
+}
+
+
+
+#itemnamenotification {
+color : red;
+}
+
+
+.jumbotron {
+ background-image: url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+}
+
+
+
+
+#freebadge {                                
+margin-left : 1px;
+background-color : blue;
+color : white;
+}
+
+#price {                                        
+color : red;
+}

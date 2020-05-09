@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"
+	type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css"
+	rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>SignUp</title>
+</head>
+<body>
+	<nav class="navbar bg-dark navbar-expand-sm navbar-dark">
+		<a href="#" class="navbar-brand"><i class="material-icons"  id="imageid">local_dining</i>
+		<span class="text-white ">truyum</span></a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse"
+			data-target="#x">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div id="x" class="collapse navbar-collapse">
+			<ul class="navbar-nav ml-auto text-right" style="float: right">
+				<li class="nav-item "><a routerLink="../food-search"><span
+						class="text-white mr-1">MenuItems</span></a> </li>
+				
+				<a routerLink="../login"><li class="nav-item "><span class="text-white mr-1">Login</span></li></a>
+        <a routerLink="../signup"><li class="nav-item "><span class="text-white">Signup</span></li></a>
+			</ul>
+		</div>
+	</nav>
+	<div class="container border col-10">
+    <h1>Signup</h1>
+    
+
+    
+    <form [formGroup]="UserForms" (ngSubmit)="onSubmit()">
+
+
+
+
+		<div class="row">
+			<div class="col-12 col-lg-12">
+				<div class="form-group">
+
+
+
+
+
+
+				<label for="username">Username</label> <input class="form-control" type="text"
+          id="username" name="username" placeholder="Enter Username" formControlName="username" required>
+          
+
+          <div *ngIf="username.invalid && (username.touched||username.dirty)" class="alert alert-danger">
+              <small *ngIf = "username.errors.required">Username is required</small>
+              
+          </div>
+  
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<div class="form-group">
+				<label for="firstname">FirstName</label> <input class="form-control" type="text"
+          id="firstname" name="firstname" placeholder="Enter Firstname" formControlName="firstname">
+          
+
+          
+          <div *ngIf="firstname.invalid && (firstname.touched||firstname.dirty)" class="alert alert-danger">
+              <small *ngIf = "firstname.errors.required">Firstname is required</small>
+              
+          </div>
+  
+
+
+
+
+
+				</div>
+			</div>
+			<div class="col-12 col-lg-6">
+				<div class="form-group">
+				<label for="lastname">LastName</label> <input class="form-control" type="text"
+          id="lastname" name="lastname" placeholder="Enter Lastname" formControlName="lastname">
+          
+
+
+          <div *ngIf="lastname.invalid && (lastname.touched||lastname.dirty)" class="alert alert-danger">
+              <small *ngIf = "lastname.errors.required">LastName is required</small>
+              
+          </div>
+  
+
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<div class="form-group">
+				<label for="password">Password</label> <input class="form-control" type="text"
+          id="password" name="password" placeholder="Enter password" formControlName="password">
+          
+
+          <div *ngIf="password.invalid && (password.touched||password.dirty)" class="alert alert-danger">
+              <small *ngIf = "password.errors.required">Password is required</small>
+              
+          </div>
+  
+          
+
+
+				</div>
+			</div>
+			<div class="col-12 col-lg-6">
+				<div class="form-group">
+				<label for="cpassword">Confirm Password</label> <input class="form-control"
+					type="text" id="cpassword" name="cpassword"
+          placeholder="Enter confirm password" formControlName="cpassword">
+          
+          
+          
+          <div *ngIf="cpassword.invalid && (cpassword.touched||cpassword.dirty)" class="alert alert-danger">
+              <small *ngIf = "cpassword!==password">Password should match</small>
+              
+          </div>
+  
+
+
+
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<input type="submit"  [disabled]="!UserForms.valid"  class="btn btn-success ml-3 mt=2 mb-2"  value="Signup">
+    </div>
+    
+    </form>
+
+
+	</div>
+	<nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-bottom">
+		<h4 class="text-white">Copyright 2019</h4>
+	</nav>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+</html>
